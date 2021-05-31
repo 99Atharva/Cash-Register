@@ -1,0 +1,30 @@
+.la {
+    border: 2PX solid #000;
+    }
+    .contain{
+        position: absolute;
+        left: 35%;
+        width: 30%;
+       display: flex;
+       top: 40%;
+       justify-content: space-around;
+    }
+    
+    .counter_box {
+    
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      
+      align-items: center;
+    }
+
+.btn {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.reset {
+    position: absolute;
+    top: 100px;
+}
