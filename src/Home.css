@@ -21,6 +21,9 @@
     display: flex;
     width: 16%;
 }
+h3{
+    line-height: 50px;
+}
 
 h4 {
     padding-top: 50px;
