@@ -42,11 +42,13 @@ function Home() {
         <div className="last_container_left">
             <div className="box">
             <img className="icon" src={img2}/>
+            <h3>Learning</h3>
             <p>Find box a little too small and curl fur hanging out mew mew </p>
             </div>
             <div className="box">
                 
                <img className="icon" src={img3} /> 
+               <h3>Community</h3>
                <p>Find box a little too small and curl fur hanging out mew mew </p>
             </div>
         </div>
