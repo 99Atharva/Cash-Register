@@ -24,14 +24,10 @@ function Show() {
       
     
         display.map(({show})=>
-          arr.push(show.Money)
+          arr.push(parseInt(show.Money))
         )
-       arr.map((num)=>
-         ar.push(parseInt(num))
-       )
-
-
-       return ar.reduce((a,b)=> a+b,0);
+        
+       return arr.reduce((a,b)=> a+b,0);
 
        
     }
