@@ -32,7 +32,7 @@ function Home() {
             <form className="Form" onSubmit={handlesubmit} >
             <div>
             <TextField id="outlined-basic" label="Amount" required
-            variant="outlined"  margin="normal" value={amount} 
+            variant="outlined"  margin="normal" value={amount} datatype = "int"
             onChange={(e)=> setAmount(e.target.value )} /> 
             </div>
             

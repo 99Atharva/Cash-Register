@@ -20,15 +20,20 @@ function Show() {
 
     function cal() {
       var arr = [];
+      var ar = [];
+      
     
         display.map(({show})=>
           arr.push(show.Money)
         )
-       arr.forEach(i => {
-         arr[i] = parseInt(arr[i])
-       });
+       arr.map((num)=>
+         ar.push(parseInt(num))
+       )
 
-       return arr
+
+       return ar.reduce((a,b)=> a+b,0);
+
+       
     }
 
 
@@ -36,8 +41,7 @@ function Show() {
     return (
         
         <div className="disp">
-         {cal()}
-       
+         {cal()}      
         </div>
      
     )
