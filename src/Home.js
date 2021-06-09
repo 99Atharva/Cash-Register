@@ -1,61 +1,54 @@
-import React from "react";
-import "./Home.css";
-import img1 from "./Elements/Logo.png";
-import img2 from "./Elements/time.svg";
-import img3 from "./Elements/comm.svg";
-import img4 from "./Elements/play.svg";
-
-
-
-
+import React from 'react';
+import {useState,useEffect} from 'react';
+import db from './Config/Config';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import './Home.css';
+import Show from './Show';
 
 function Home() {
 
-    const Magnify =  {
-        
-    }
+    const [remark, setRemark] = useState('');
+    const [final, setFinal] = useState('');
+    const [amount, setAmount] = useState('');
+    
+
+    const handlesubmit = (e) => {
+        e.preventDefault();
+
+        db.collection('Register').add({
+            Title: remark,
+            Money : amount,
+        })
+    
+        setRemark('');
+        setAmount('');
+    };
+
 
     return (
-        <div className="contain ">
-       <div className="1st_half">
-       <div className="logo">
-            <img src={img1}/> <h4>COLEARN</h4>
-            <div className="nav">
-                <ul >
-                <li>Product</li>
-                <li>Pricing</li>
-                <li>Contacts</li>
-                <li>Sigin</li>
-                </ul>
+        <div className="container">
+           <Show />
+            <form className="Form" onSubmit={handlesubmit} >
+            <div>
+            <TextField id="outlined-basic" label="Amount" required
+            variant="outlined"  margin="normal" value={amount} 
+            onChange={(e)=> setAmount(e.target.value )} /> 
             </div>
-        </div>
-        <div className="left_box">
-        <p className="head">Efficient learning,<br/>
-        made simpler.</p>
+            
+            <div>
+            <TextField id="outlined-basic" label="Remark" required
+            variant="outlined" margin="normal"  value={remark} 
+            onChange={(e)=> setRemark(e.target.value )} /> 
+            </div>
+            
+            <div className="btn" >
+            <Button variant="outlined" type="submit">
+               Save
+           </Button>
+            </div>
 
-        <p className="text">Find box a little too small and curl up with fur hanging out mew mew i just saw other cats inside the house and nobody ask me before using my litter box. Scratch me there, elevator butt eat my own ears throwup on your pillow paw at Intently sniff hand bleghbleghvomit my furball really tie the</p>
-        <div className="btn_grp ">
-            <button>Get Started</button>
-            <button id="btn2"> <img src={img4}/>See how it works</button>
-        </div>
-
-        <div className="last_container_left">
-            <div className="box">
-            <img className="icon" src={img2}/>
-            <h3>Learning</h3>
-            <p>Find box a little too small and curl fur hanging out mew mew </p>
-            </div>
-            <div className="box">
-                
-               <img className="icon" src={img3} /> 
-               <h3>Community</h3>
-               <p>Find box a little too small and curl fur hanging out mew mew </p>
-            </div>
-        </div>
-        </div>
-        
-       </div>
-        
+        </form>  
         </div>
     )
 }

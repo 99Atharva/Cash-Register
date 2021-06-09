@@ -1,111 +1,52 @@
-.contain
-{   
-    
-    background-image: url("./Elements/home.svg") ;
-    background-size: cover;
+.Form {
+    display: flexbox;
+    padding: 4rem 3rem;
+    width: 35rem;
+    justify-content: flex-start;
+    background-color: rgba(124, 243, 187, 0.726);
+}
+.container{
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    min-width: 650px;
+    padding-top: 10%;
+    justify-content: center;
+}
+.Form div {
+    width: 100%;
 }
 
-.logo img{
-
-    width: 150px;
-    height: auto;
+.detail {
+    padding: 2rem 3rem;
+    background: rgba(248, 191, 116, 0.534);
 }
 
-.logo {
-    /* position: absolute;
-    top: -5%; */
-    display: flex;
-    width: 16%;
-}
-h3{
-    line-height: 50px;
+.btn .MuiButton-root {
+    margin-top: 2rem;
+    color: rgb(237, 241, 241);
+    font-weight: 600;
+    background-color: rgb(226, 146, 55);
 }
 
-h4 {
-    padding-top: 50px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    color: blanchedalmond;
-    font-size: 30px;
+.Form p {
+    margin-top: 20px;
+    color: rgb(76, 77, 77);
+    font-size: larger;
 }
-.left_box {
-    padding: 20px 90px;
-    width: 550px;
-    
-    color: rgb(255, 255, 255);
+
+.call
+{
+    padding: 1rem 4rem;
+    color: rgb(50, 54, 54);
 }
-.head {
-    font-size: 50px;
+.call :first-child {
     margin-bottom: 20px;
-}
-.text {
-    font-size: 20px;
-    color: rgba(180, 180, 180, 0.822);
+    font-size: larger;
+    font-weight: 500;
 }
 
-.btn_grp {
-    
-    display: flex;
-    margin-top: 50px;
+.mail {
+    font-size: larger;
+    margin-top: 20px;
+    color: rgb(104, 104, 104);
+    font-weight: 600;
 }
 
-button{
-    margin: 10px;
-    font-size: 25px;
-    border-radius: 10px;
-    background-color: rgb(151, 50, 245);
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    border: none;
-}
-button img {
-
-    width: 40px;
-    vertical-align: middle;
-    padding: 0px 15px;
-}
-#btn2 {
-    background-color: #bc74ffc9;
-}
-
-.icon {
-    color: bisque;
-    width: 50px;
-}
-
-.last_container_left {
-    display: flex;
-    padding-top: 60px;
-    justify-content: space-around;
-}
-.box{
-    
-    text-align: center;
-    width: 180px;
-}
-.box img {
-    padding-bottom: 10px;
-}
-
-.nav {
-    padding-top: 20px;
-    position: absolute;
-    width: 500px;
-    right: 30px;
-    color: rgb(179, 179, 179);
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
-
-li {
-    font-size: 25px;
-    padding:10px;
-}
